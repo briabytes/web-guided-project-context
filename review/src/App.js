@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import data from './data';
 
 const App = ()=> {
-    const [data, setData] = useState();
-    
+    const [person, setPerson] = useState(data);
+
+    console.log(person);
     return(<div className="component">
         <h1>Hello World</h1>
         <SubComponent1 />
