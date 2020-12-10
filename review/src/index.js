@@ -6,6 +6,6 @@ import App from './App';
 import AppContextReducer from './AppContextReducer';
 
 render(
-    <AppContextReducer/>,
+    <App/>,
     document.querySelector('#root')
 );
