@@ -8,6 +8,7 @@ const App = ()=> {
 
     const cmp = ()=>{
         if (person) {
+            console.log("here");
             return(<SubComponent1 /> );
         } else {
             return(<h3>Loading</h3>);
