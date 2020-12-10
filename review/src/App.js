@@ -1,10 +1,14 @@
-import React, { useState, createContext, useContext } from 'react';
+import React, { useState, createContext, useContext, useEffect } from 'react';
 import data from './data';
 
 const PersonContext = createContext();
 
 const App = ()=> {
     const [person, setPerson] = useState(null);
+
+    useEffect(()=>{
+
+    }, []);
 
     return(<div className="component">
         <PersonContext.Provider value={[person, setPerson]}>
