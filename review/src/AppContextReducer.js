@@ -39,14 +39,7 @@ const SubComponent3 = ()=> {
     const [person, dispatch] = useContext(PersonContext);
 
     const handleNameChange = ()=> {
-        setPerson({
-            ...person,
-            name: {
-                title: "Mr",
-                first: "Warren",
-                last: "Longmire"
-            }
-        });
+        dispatch(changeName("Mr", "Warren", "Longmire"));
     }
 
     const handleLocationChange = () => {
