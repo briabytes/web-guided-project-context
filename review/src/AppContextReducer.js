@@ -5,8 +5,8 @@ import { initialState, reducer, changeName, changeLocation} from './reducers';
 const PersonContext = createContext();
 
 const App = ()=> {
-    const [data, dispatch] = useReducer(reducer, initialState);
-    
+    const [state, dispatch] = useReducer(reducer, initialState);
+
     return(<div className="component">
         <PersonContext.Provider value={[data.person, dispatch]}>
             <h1>Hello World</h1>
