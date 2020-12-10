@@ -21,7 +21,7 @@ export const reducer = (state, action) => {
             return({
                 ...state,
                 person: {
-                    ...person,
+                    ...state.person,
                     name: action.payload
                 }
             });
@@ -30,7 +30,7 @@ export const reducer = (state, action) => {
             return({
                 ...state,
                 person: {
-                    ...person,
+                    ...state.person,
                     location: action.payload
                 }
             });
