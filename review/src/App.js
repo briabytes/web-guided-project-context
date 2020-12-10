@@ -7,19 +7,19 @@ const App = ()=> {
     const [person, setPerson] = useState(data);
 
     return(<div className="component">
-        <PersonContext.Provider>
+        <PersonContext.Provider value={[person, setPerson]}>
             <h1>Hello World</h1>
-            <SubComponent1 person={person} setPerson={setPerson}/>
+            <SubComponent1 />
         </PersonContext.Provider>
     </div>);
 };
 
-const SubComponent1 = ({ person, setPerson })=> {
+const SubComponent1 = ()=> {
     const { name } = person;
 
     return(<div className="component">
         <p><strong>Name:</strong> { name.title } { name.first} { name.last}</p>
-        <SubComponent2 person={person} setPerson={setPerson}/>
+        <SubComponent2 />
     </div>);
 };
 
@@ -28,7 +28,7 @@ const SubComponent2 = ({ person, setPerson })=> {
 
     return(<div className="component">
         <p><strong>Location:</strong> {location.street} {location.city} {location.state}</p>
-        <SubComponent3 person={person} setPerson={setPerson}/>
+        <SubComponent3 />
     </div>);
 };
 
