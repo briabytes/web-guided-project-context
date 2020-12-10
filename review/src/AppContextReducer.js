@@ -1,12 +1,17 @@
-import React, { useState, useReducer, createContext, useContext } from 'react';
+import React, { useState, useReducer, createContext, useContext, useEffect } from 'react';
 
-import { initialState, reducer, changeName, changeLocation} from './reducers';
+import { initialState, reducer, changeName, changeLocation, } from './reducers';
 
 const PersonContext = createContext();
 
 const App = ()=> {
     const [state, dispatch] = useReducer(reducer, initialState);
-    
+
+    useEffect(()=>{
+        dispatch();
+    }, []);
+
+
     return(<div className="component">
         <PersonContext.Provider value={[state, dispatch]}>
             <h1>Hello World</h1>
