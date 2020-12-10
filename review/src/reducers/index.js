@@ -4,7 +4,7 @@ const CHANGE_NAME = 'CHANGE_NAME';
 const CHANGE_LOCATION = 'CHANGE_LOCATION';
 
 export const initialState = {
-    person: data
+    person: null
 }
 
 export const changeName = (title, first, last) => {
