@@ -10,9 +10,11 @@ const App = ()=> {
     </div>);
 };
 
-const SubComponent1 = ()=> {
+const SubComponent1 = (props)=> {
+    const { name } = props;
+
     return(<div className="component">
-        <h1>Sub1</h1>
+        <h1>Name { name.title } { name.first} { name.last}</h1>
         <SubComponent2 />
     </div>);
 };
