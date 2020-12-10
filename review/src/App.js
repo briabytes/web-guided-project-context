@@ -11,10 +11,10 @@ const App = ()=> {
 };
 
 const SubComponent1 = (props)=> {
-    const { name } = props;
+    const { name } = props.person;
 
     return(<div className="component">
-        <h1>Name { name.title } { name.first} { name.last}</h1>
+        <p><strong>Name:</strong> { name.title } { name.first} { name.last}</p>
         <SubComponent2 />
     </div>);
 };
