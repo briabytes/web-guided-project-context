@@ -25,16 +25,14 @@ const SubComponent1 = ()=> {
 };
 
 const SubComponent2 = ()=> {
-
     return(<div className="component">
-        
         <SubComponent3 />
     </div>);
 };
 
 const SubComponent3 = ()=> {
     const [person, setPerson] = useContext(PersonContext);
-
+    
     const handleNameChange = ()=> {
         setPerson({
             ...person,
@@ -58,7 +56,7 @@ const SubComponent3 = ()=> {
     }
 
     return(<div className="component">
-        <p><strong>Location:</strong> {location.street} {location.city} {location.state}</p>
+        <p><strong>Location:</strong> {person.location.street} {person.location.city} {person.location.state}</p>
         <button onClick={handleNameChange}>Set Name</button>
         <button onClick={handleLocationChange}>Set Location</button>
     </div>);
