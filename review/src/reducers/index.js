@@ -5,11 +5,11 @@ const initialState = {
     person: data
 }
 
-export const changeName = ((title, first, last) => {
+export const changeName = (title, first, last) => {
     return({ type:"CHANGE_NAME", payload:{title, first, last}});
 }
 
-export const changeLocation = ((street, city, state) => {
+export const changeLocation = (street, city, state) => {
     return({ type:"CHANGE_LOCATION", payload:{street, city, state}});
 }
 
