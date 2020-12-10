@@ -1,20 +1,21 @@
 import React, { useState, useReducer, createContext, useContext } from 'react';
-import data from './data';
 
-import { initialState, reducer, }
+import { initialState, reducer, changeName, changeLocation} from './reducers';
 
 const PersonContext = createContext();
 const DogContext = createContext();
 
 const App = ()=> {
     // const [person, setPerson] = useState(data);
-    const [person, dispatch] = useReducer(reducer, );
+    const [person, dispatch] = useReducer(reducer, initialState);
     
+    console.log(person);
+
     return(<div className="component">
-        <PersonContext.Provider value={[person, setPerson]}>
+        {/* <PersonContext.Provider value={[person, setPerson]}>
             <h1>Hello World</h1>
             <SubComponent1 />
-        </PersonContext.Provider>
+        </PersonContext.Provider> */}
     </div>);
 };
 
