@@ -5,7 +5,9 @@ const PersonContext = createContext();
 const DogContext = createContext();
 
 const App = ()=> {
-    const [person, setPerson] = useState(data);
+    const [person, setPerson] = useState({});
+
+    
     
     return(<div className="component">
         <PersonContext.Provider value={[person, setPerson]}>
