@@ -13,16 +13,16 @@ export const initialState = {
     err:''
 }
 
-export const fetchStart = (title, first, last) => {
-    return({ type:CHANGE_NAME, payload:{title, first, last}});
+export const fetchStart = () => {
+    return({ type:FETCH_START});
 }
 
-export const changeName = (title, first, last) => {
-    return({ type:CHANGE_NAME, payload:{title, first, last}});
+export const fetchSuccess = (title, first, last) => {
+    return({ type:FETCH_SUCCESS, payload:{title, first, last}});
 }
 
-export const changeName = (title, first, last) => {
-    return({ type:CHANGE_NAME, payload:{title, first, last}});
+export const fetchFail = (title, first, last) => {
+    return({ type:FETCH_FAIL, payload:{title, first, last}});
 }
 
 export const changeName = (title, first, last) => {
