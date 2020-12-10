@@ -7,8 +7,10 @@ const App = ()=> {
     const [person, setPerson] = useState(data);
 
     return(<div className="component">
-        <h1>Hello World</h1>
-        <SubComponent1 person={person} setPerson={setPerson}/>
+        <PersonContext.Provider>
+            <h1>Hello World</h1>
+            <SubComponent1 person={person} setPerson={setPerson}/>
+        </PersonContext.Provider>
     </div>);
 };
 
