@@ -43,14 +43,7 @@ const SubComponent3 = ()=> {
     }
 
     const handleLocationChange = () => {
-        setPerson({
-            ...person,
-            location:{
-                street: "22 N 22nd street",
-                city: "Philadelphia",
-                state: "PA"
-            }
-        })
+        dispatch(changeLocation("22 N 22nd Street", "Philadelphia", "PA"));
     }
 
     return(<div className="component">
