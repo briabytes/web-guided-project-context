@@ -33,7 +33,6 @@ const SubComponent2 = ()=> {
 
     return(<div className="component">
         <p><strong>Location:</strong> {location.street} {location.city} {location.state}</p>
-        <p><strong>DogName:</strong> { dogName }</p>
         <SubComponent3 />
     </div>);
 };
