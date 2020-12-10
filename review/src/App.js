@@ -11,6 +11,7 @@ const App = ()=> {
 
     return(<div className="component">
         <PersonContext.Provider value={[person, setPerson]}>
+            <DogContext.Provider value={{dogName:"Bark"}}
             <h1>Hello World</h1>
             <SubComponent1 />
         </PersonContext.Provider>
