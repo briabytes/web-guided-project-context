@@ -1,6 +1,6 @@
 import React, { useState, useReducer, createContext, useContext, useEffect } from 'react';
 
-import { initialState, reducer, changeName, changeLocation, } from './reducers';
+import { initialState, reducer, changeName, changeLocation, fetchStart, fetchSuccess, fetchFail} from './reducers';
 
 const PersonContext = createContext();
 
@@ -8,7 +8,11 @@ const App = ()=> {
     const [state, dispatch] = useReducer(reducer, initialState);
 
     useEffect(()=>{
-        dispatch();
+        dispatch(fetchStart());
+        
+        setTimeout(()=>{
+            dispatch(fetchSuccess());
+        });
     }, []);
 
 
