@@ -28,9 +28,13 @@ const SubComponent2 = ({ person, setPerson })=> {
     </div>);
 };
 
-const SubComponent3 = ()=> {
+const SubComponent3 = ({ setPerson })=> {
     const handleNameChange = ()=> {
-
+        setPerson({
+            person:{
+                
+            }
+        });
     }
 
     const handleLocationChange = () => {
