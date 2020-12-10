@@ -44,7 +44,9 @@ const SubComponent3 = ({ person, setPerson })=> {
         setPerson({
             ...person,
             location:{
-                
+                street: "22 N 22nd street",
+                city: "Philadelphia",
+                state: "PA"
             }
         })
     }
