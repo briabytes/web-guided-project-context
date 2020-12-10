@@ -7,7 +7,7 @@ const App = ()=> {
     const [person, setPerson] = useState(data);
 
     return(<div className="component">
-        <PersonContext.Provider value={[person, setPerson]}>
+        <PersonContext.Provider value={[person, setPerson, "This weird thing"]}>
             <h1>Hello World</h1>
             <SubComponent1 />
         </PersonContext.Provider>
@@ -15,7 +15,7 @@ const App = ()=> {
 };
 
 const SubComponent1 = ()=> {
-    const [ person ] = useContext(PersonContext);
+    const [ person, setPerson, weirdThing] = useContext(PersonContext);
     const { name } = person;
 
     return(<div className="component">
