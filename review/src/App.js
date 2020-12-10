@@ -4,22 +4,12 @@ import data from './data';
 const PersonContext = createContext();
 
 const App = ()=> {
-    const [person, setPerson] = useState({});
-
-    const cmp = ()=>{
-        if (person) {
-            console.log("here");
-            return(<SubComponent1 /> );
-        } else {
-            return(<h3>Loading</h3>);
-        }
-    }
-
+    const [person, setPerson] = useState(null);
 
     return(<div className="component">
         <PersonContext.Provider value={[person, setPerson]}>
             <h1>Hello World</h1>
-            {/* {cmp()} */}
+            {(person)? <SubComponent1 /> : <h3>Loading</h3>}
         </PersonContext.Provider>
     </div>);
 };
