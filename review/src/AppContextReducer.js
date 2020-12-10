@@ -6,11 +6,11 @@ const PersonContext = createContext();
 
 const App = ()=> {
     const [state, dispatch] = useReducer(reducer, initialState);
-
+    
     return(<div className="component">
         <PersonContext.Provider value={[state, dispatch]}>
             <h1>Hello World</h1>
-            <SubComponent1 />
+            {(state.person)? <SubComponent1 /> : <h3>Loading</h3>}
         </PersonContext.Provider>
     </div>);
 };
