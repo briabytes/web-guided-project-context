@@ -20,8 +20,10 @@ const SubComponent1 = ({ person })=> {
 };
 
 const SubComponent2 = ({ person })=> {
+    const { location } = person;
+
     return(<div className="component">
-        <p><strong>Location:</strong> {} </p>
+        <p><strong>Location:</strong> {location.street} {location.city} {location.state}</p>
         <SubComponent3 />
     </div>);
 };
