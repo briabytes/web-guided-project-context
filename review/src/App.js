@@ -29,8 +29,16 @@ const SubComponent2 = ({ person, setPerson })=> {
 };
 
 const SubComponent3 = ()=> {
+    const handleNameChange = ()=> {
+
+    }
+
+    const handleLocationChange = () => {
+
+    }
     return(<div className="component">
-        
+        <button>Set Name</button>
+        <button>Set Location</button>
     </div>);
 };
 
