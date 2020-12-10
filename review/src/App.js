@@ -31,19 +31,22 @@ const SubComponent2 = ({ person, setPerson })=> {
 const SubComponent3 = ({ person, setPerson })=> {
     const handleNameChange = ()=> {
         setPerson({
-            person:{
-                ...person,
-                name: {
-                    title: "Mr",
-                    first: "Warren",
-                    last: "Longmire"
-                }
+            ...person,
+            name: {
+                title: "Mr",
+                first: "Warren",
+                last: "Longmire"
             }
         });
     }
 
     const handleLocationChange = () => {
-
+        setPerson({
+            ...person,
+            location:{
+                
+            }
+        })
     }
 
     return(<div className="component">
