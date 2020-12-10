@@ -10,7 +10,7 @@ const App = ()=> {
     </div>);
 };
 
-const SubComponent1 = ({ person })=> {
+const SubComponent1 = ({ person, setPerson })=> {
     const { name } = person;
 
     return(<div className="component">
@@ -19,18 +19,18 @@ const SubComponent1 = ({ person })=> {
     </div>);
 };
 
-const SubComponent2 = ({ person })=> {
+const SubComponent2 = ({ person, setPerson })=> {
     const { location } = person;
 
     return(<div className="component">
         <p><strong>Location:</strong> {location.street} {location.city} {location.state}</p>
-        <SubComponent3 />
+        <SubComponent3 person={person} setPerson={setPerson}/>
     </div>);
 };
 
 const SubComponent3 = ()=> {
     return(<div className="component">
-        <h1>Sub3</h1>
+        
     </div>);
 };
 
