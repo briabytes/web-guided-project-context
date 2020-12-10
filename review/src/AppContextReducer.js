@@ -8,7 +8,7 @@ const App = ()=> {
     const [state, dispatch] = useReducer(reducer, initialState);
 
     return(<div className="component">
-        <PersonContext.Provider value={[data.person, dispatch]}>
+        <PersonContext.Provider value={[state, dispatch]}>
             <h1>Hello World</h1>
             <SubComponent1 />
         </PersonContext.Provider>
