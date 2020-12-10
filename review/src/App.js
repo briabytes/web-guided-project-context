@@ -28,11 +28,16 @@ const SubComponent2 = ({ person, setPerson })=> {
     </div>);
 };
 
-const SubComponent3 = ({ setPerson })=> {
+const SubComponent3 = ({ person, setPerson })=> {
     const handleNameChange = ()=> {
         setPerson({
             person:{
-                
+                ...person,
+                name: {
+                    title: "Mr",
+                    first: "Warren",
+                    last: "Longmire"
+                }
             }
         });
     }
