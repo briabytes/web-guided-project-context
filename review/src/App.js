@@ -23,7 +23,7 @@ const SubComponent1 = ()=> {
     </div>);
 };
 
-const SubComponent2 = ({ person, setPerson })=> {
+const SubComponent2 = ()=> {
     const { location } = person;
 
     return(<div className="component">
@@ -32,7 +32,7 @@ const SubComponent2 = ({ person, setPerson })=> {
     </div>);
 };
 
-const SubComponent3 = ({ person, setPerson })=> {
+const SubComponent3 = ()=> {
     const handleNameChange = ()=> {
         setPerson({
             ...person,
