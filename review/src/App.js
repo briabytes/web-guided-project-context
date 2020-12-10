@@ -7,11 +7,17 @@ const DogContext = createContext();
 const App = ()=> {
     const [person, setPerson] = useState({});
 
-    console.log(person);
+    const cmp = ()=>{
+        if (person) {
+            return(<SubComponent1 /> );
+        } else {
+            return(<h3>Loading</h3>);
+        }
+    }
     return(<div className="component">
         <PersonContext.Provider value={[person, setPerson]}>
             <h1>Hello World</h1>
-            {person ? <SubComponent1 /> : <h3>Loading</h3>}
+            {cmp()}
         </PersonContext.Provider>
     </div>);
 };
