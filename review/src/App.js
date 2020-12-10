@@ -7,12 +7,12 @@ const DogContext = createContext();
 const App = ()=> {
     const [person, setPerson] = useState({});
 
-    
+
     
     return(<div className="component">
         <PersonContext.Provider value={[person, setPerson]}>
             <h1>Hello World</h1>
-            <SubComponent1 />
+            {(person) ? <SubComponent1 /> : <h3>Loading</h3>}
         </PersonContext.Provider>
     </div>);
 };
