@@ -7,7 +7,9 @@ const App = ()=> {
     const [person, setPerson] = useState(null);
 
     useEffect(()=>{
-
+        setTimeout(()=>{
+            setPerson(data);
+        }, 3000);
     }, []);
 
     return(<div className="component">
