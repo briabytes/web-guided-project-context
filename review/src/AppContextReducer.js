@@ -8,11 +8,7 @@ const App = ()=> {
     const [state, dispatch] = useReducer(reducer, initialState);
 
     useEffect(()=>{
-        dispatch(fetchStart());
-        
-        setTimeout(()=>{
-            dispatch(fetchSuccess());
-        });
+        dispatch(getPerson());
     }, []);
 
 
