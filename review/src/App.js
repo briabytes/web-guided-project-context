@@ -6,8 +6,10 @@ const PersonContext = createContext();
 const App = ()=> {
     const [person, setPerson] = useState(data);
 
+    const contextData = { person:person, setPerson:setPerson };
+
     return(<div className="component">
-        <PersonContext.Provider value={[person, setPerson]}>
+        <PersonContext.Provider value={ contextData }>  //{[person, setPerson]}>
             <h1>Hello World</h1>
             <SubComponent1 />
         </PersonContext.Provider>
