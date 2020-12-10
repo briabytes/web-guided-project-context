@@ -9,7 +9,20 @@ const FETCH_FAIL = 'FETCH_FAIL';
 
 export const initialState = {
     person: null,
-    fetching: false
+    fetching: false,
+    err:''
+}
+
+export const fetchStart = (title, first, last) => {
+    return({ type:CHANGE_NAME, payload:{title, first, last}});
+}
+
+export const changeName = (title, first, last) => {
+    return({ type:CHANGE_NAME, payload:{title, first, last}});
+}
+
+export const changeName = (title, first, last) => {
+    return({ type:CHANGE_NAME, payload:{title, first, last}});
 }
 
 export const changeName = (title, first, last) => {
@@ -31,7 +44,8 @@ export const reducer = (state, action) => {
             return({
                 ...state,
                 person: action.payload,
-                fetching:false
+                fetching:false,
+                err:''
             })
         case(FETCH_FAIL):
             return({
