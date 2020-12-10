@@ -4,10 +4,9 @@ import data from './data';
 const App = ()=> {
     const [person, setPerson] = useState(data);
 
-    console.log(person);
     return(<div className="component">
         <h1>Hello World</h1>
-        <SubComponent1 />
+        <SubComponent1 person={person} setPerson={setPerson}/>
     </div>);
 };
 
