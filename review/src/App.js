@@ -18,7 +18,7 @@ const App = ()=> {
     return(<div className="component">
         <PersonContext.Provider value={[person, setPerson]}>
             <h1>Hello World</h1>
-            {cmp()}
+            {/* {cmp()} */}
         </PersonContext.Provider>
     </div>);
 };
