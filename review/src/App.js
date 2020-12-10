@@ -2,7 +2,6 @@ import React, { useState, createContext, useContext } from 'react';
 import data from './data';
 
 const PersonContext = createContext();
-const DogContext = createContext();
 
 const App = ()=> {
     const [person, setPerson] = useState({});
@@ -14,6 +13,8 @@ const App = ()=> {
             return(<h3>Loading</h3>);
         }
     }
+
+
     return(<div className="component">
         <PersonContext.Provider value={[person, setPerson]}>
             <h1>Hello World</h1>
