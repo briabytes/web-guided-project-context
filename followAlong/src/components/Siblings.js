@@ -6,12 +6,20 @@ const Siblings = (props) => {
 
   return (
     <section className="parents">
-      {family.siblings.map((p) => (
-        <div className="person" key={p.name}>
-          <img width="150" src={p.img} alt={p.name} />
-          <strong>{p.name}</strong>
-        </div>
-      ))}
+      <FamilyContext.Consumer>
+        {
+          family => {
+            return(
+                family.siblings.map((p) => (
+                <div className="person" key={p.name}>
+                  <img width="150" src={p.img} alt={p.name} />
+                  <strong>{p.name}</strong>
+                </div>
+              ))
+            );
+          }
+        }
+      </FamilyContext.Consumer>
     </section>
   );
 };
