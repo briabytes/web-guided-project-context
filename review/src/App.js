@@ -11,7 +11,7 @@ const App = ()=> {
             setPerson(data);
         }, 3000);
     }, []);
-
+    
     return(<div className="component">
         <PersonContext.Provider value={[person, setPerson]}>
             <h1>Hello World</h1>
