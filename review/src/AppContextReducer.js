@@ -5,7 +5,7 @@ import { initialState, reducer, changeName, changeLocation} from './reducers';
 const PersonContext = createContext();
 
 const App = ()=> {
-    const [person, dispatch] = useReducer(reducer, initialState);
+    const [data, dispatch] = useReducer(reducer, initialState);
     
     console.log(person);
 
@@ -18,7 +18,7 @@ const App = ()=> {
 };
 
 const SubComponent1 = ()=> {
-    const [ person] = useContext(PersonContext);
+    const [ person ] = useContext(PersonContext);
     const { name } = person;
 
     return(<div className="component">
@@ -38,7 +38,7 @@ const SubComponent2 = ()=> {
 };
 
 const SubComponent3 = ()=> {
-    const [person, setPerson] = useContext(PersonContext);
+    const [person, dispatch] = useContext(PersonContext);
 
     const handleNameChange = ()=> {
         setPerson({
