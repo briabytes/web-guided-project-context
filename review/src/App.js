@@ -10,18 +10,18 @@ const App = ()=> {
     </div>);
 };
 
-const SubComponent1 = (props)=> {
-    const { name } = props.person;
+const SubComponent1 = ({ person })=> {
+    const { name } = person;
 
     return(<div className="component">
         <p><strong>Name:</strong> { name.title } { name.first} { name.last}</p>
-        <SubComponent2 />
+        <SubComponent2 person={person} setPerson={setPerson}/>
     </div>);
 };
 
-const SubComponent2 = ()=> {
+const SubComponent2 = ({ person })=> {
     return(<div className="component">
-        <h1>Sub2</h1>
+        <p><strong>Location:</strong> {} </p>
         <SubComponent3 />
     </div>);
 };
