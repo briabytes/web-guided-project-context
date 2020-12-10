@@ -11,9 +11,10 @@ const App = ()=> {
 
     return(<div className="component">
         <PersonContext.Provider value={[person, setPerson]}>
-            <DogContext.Provider value={{dogName:"Bark"}}
-            <h1>Hello World</h1>
-            <SubComponent1 />
+            <DogContext.Provider value={{dogName:"Bark"}}>
+                <h1>Hello World</h1>
+                <SubComponent1 />
+            </DogContext.Provider>
         </PersonContext.Provider>
     </div>);
 };
@@ -30,10 +31,13 @@ const SubComponent1 = ()=> {
 
 const SubComponent2 = ()=> {
     const [ person ] = useContext(PersonContext);
+    const { dogName } = useContext(DogContext);
+
     const { location } = person;
 
     return(<div className="component">
         <p><strong>Location:</strong> {location.street} {location.city} {location.state}</p>
+        <p><strong>DogName: { dogName }</strong></p>
         <SubComponent3 />
     </div>);
 };
