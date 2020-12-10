@@ -1,21 +1,22 @@
 import data from './../data';
-
+const CHANGE_NAME = 'CHANGE_NAME';
+const CHANGE_LOCATION = 'CHANGE_LOCATION';
 
 const initialState = {
     person: data
 }
 
 export const changeName = (title, first, last) => {
-    return({ type:"CHANGE_NAME", payload:{title, first, last}});
+    return({ type:CHANGE_NAME, payload:{title, first, last}});
 }
 
 export const changeLocation = (street, city, state) => {
-    return({ type:"CHANGE_LOCATION", payload:{street, city, state}});
+    return({ type:CHANGE_LOCATION, payload:{street, city, state}});
 }
 
 export const reducer = (state, action) => {
     switch(action.type) {
-        case("CHANGE_NAME"):
+        case(CHANGE_NAME):
             return({
                 ...state,
                 person: {
@@ -24,7 +25,7 @@ export const reducer = (state, action) => {
                 }
             });
 
-        case("CHANGE_LOCATION"):
+        case(CHANGE_LOCATION):
             return({
                 ...state,
                 person: {
