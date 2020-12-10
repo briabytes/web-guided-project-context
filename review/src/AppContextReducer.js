@@ -3,24 +3,22 @@ import React, { useState, useReducer, createContext, useContext } from 'react';
 import { initialState, reducer, changeName, changeLocation} from './reducers';
 
 const PersonContext = createContext();
-const DogContext = createContext();
 
 const App = ()=> {
-    // const [person, setPerson] = useState(data);
     const [person, dispatch] = useReducer(reducer, initialState);
     
     console.log(person);
 
     return(<div className="component">
-        {/* <PersonContext.Provider value={[person, setPerson]}>
+        <PersonContext.Provider value={[person, dispatch]}>
             <h1>Hello World</h1>
             <SubComponent1 />
-        </PersonContext.Provider> */}
+        </PersonContext.Provider>
     </div>);
 };
 
 const SubComponent1 = ()=> {
-    const [ person, setPerson] = useContext(PersonContext);
+    const [ person] = useContext(PersonContext);
     const { name } = person;
 
     return(<div className="component">
