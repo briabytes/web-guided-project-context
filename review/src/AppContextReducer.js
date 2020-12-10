@@ -1,6 +1,8 @@
 import React, { useState, useReducer, createContext, useContext } from 'react';
 import data from './data';
 
+import { initialState, reducer, }
+
 const PersonContext = createContext();
 const DogContext = createContext();
 

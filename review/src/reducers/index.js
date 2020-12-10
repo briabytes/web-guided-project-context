@@ -1,8 +1,9 @@
 import data from './../data';
+
 const CHANGE_NAME = 'CHANGE_NAME';
 const CHANGE_LOCATION = 'CHANGE_LOCATION';
 
-const initialState = {
+export const initialState = {
     person: data
 }
 
