@@ -16,8 +16,8 @@ const App = ()=> {
 };
 
 const SubComponent1 = ()=> {
-    const [ person ] = useContext(PersonContext);
-    const { name } = person;
+    const [ state ] = useContext(PersonContext);
+    const { name } = state.person;
 
     return(<div className="component">
         <p><strong>Name:</strong> { name.title } { name.first} { name.last}</p>
@@ -26,8 +26,8 @@ const SubComponent1 = ()=> {
 };
 
 const SubComponent2 = ()=> {
-    const [ person ] = useContext(PersonContext);
-    const { location } = person;
+    const [ state ] = useContext(PersonContext);
+    const { location } = state.person;
 
     return(<div className="component">
         <p><strong>Location:</strong> {location.street} {location.city} {location.state}</p>
@@ -36,7 +36,7 @@ const SubComponent2 = ()=> {
 };
 
 const SubComponent3 = ()=> {
-    const [person, dispatch] = useContext(PersonContext);
+    const [state, dispatch] = useContext(PersonContext);
 
     const handleNameChange = ()=> {
         dispatch(changeName("Mr", "Warren", "Longmire"));
