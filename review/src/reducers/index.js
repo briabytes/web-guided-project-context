@@ -17,12 +17,12 @@ export const fetchStart = () => {
     return({ type:FETCH_START});
 }
 
-export const fetchSuccess = (title, first, last) => {
-    return({ type:FETCH_SUCCESS, payload:{title, first, last}});
+export const fetchSuccess = (person) => {
+    return({ type:FETCH_SUCCESS, payload:person});
 }
 
-export const fetchFail = (title, first, last) => {
-    return({ type:FETCH_FAIL, payload:{title, first, last}});
+export const fetchFail = (err) => {
+    return({ type:FETCH_FAIL, payload:err});
 }
 
 export const changeName = (title, first, last) => {
