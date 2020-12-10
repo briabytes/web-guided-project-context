@@ -35,6 +35,8 @@ const SubComponent2 = ()=> {
 };
 
 const SubComponent3 = ()=> {
+    const [person, setPerson] = useContext(PersonContext);
+
     const handleNameChange = ()=> {
         setPerson({
             ...person,
