@@ -36,9 +36,10 @@ const SubComponent3 = ()=> {
     const handleLocationChange = () => {
 
     }
+
     return(<div className="component">
-        <button>Set Name</button>
-        <button>Set Location</button>
+        <button onClick={handleNameChange}>Set Name</button>
+        <button onClick={handleLocationChange}>Set Location</button>
     </div>);
 };
 
