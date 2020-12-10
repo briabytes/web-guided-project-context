@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const App = ()=> {
+    const [data, setData] = useState();
+    
     return(<div className="component">
         <h1>Hello World</h1>
         <SubComponent1 />
