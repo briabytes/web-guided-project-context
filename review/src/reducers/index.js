@@ -27,6 +27,18 @@ export const reducer = (state, action) => {
                 ...state,
                 fetching:true
             })
+        case(FETCH_SUCCESS):
+            return({
+                ...state,
+                person: action.payload,
+                fetching:false
+            })
+        case(FETCH_FAIL):
+            return({
+                ...state,
+                err: action.payload,
+                fetching:false
+            })
         case(CHANGE_NAME):
             return({
                 ...state,
